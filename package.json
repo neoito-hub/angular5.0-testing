@@ -13,6 +13,8 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^5.0.0",
+    "@angular/material": "git+https://github.com/angular/material2-builds.git",
+    "@angular/cdk": "git+https://github.com/angular/cdk-builds.git",
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
