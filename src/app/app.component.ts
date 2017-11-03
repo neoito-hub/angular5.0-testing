@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'TDD';
   angularVersion = 5;
+  chatForm = new FormGroup({
+    user: new FormControl('', Validators.required),
+    message: new FormControl(''),
+    type: new FormControl('')
+  });
 }

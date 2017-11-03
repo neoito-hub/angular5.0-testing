@@ -4,19 +4,19 @@
     Angular {{angularVersion}} {{title}}
   </pre>
 </div>
-
-<div class="example-container">
-    <mat-form-field>
-      <input matInput placeholder="Input">
-    </mat-form-field>
-
-    <mat-form-field>
-      <textarea matInput placeholder="Textarea"></textarea>
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-select placeholder="Select">
-        <mat-option value="option">Option</mat-option>
-      </mat-select>
-    </mat-form-field>
-  </div>
+<form [formGroup]="chatForm" novalidate>
+  <div class="form-group">
+      <mat-form-field>
+        <input matInput placeholder="Username" formControlName="user">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput placeholder="Message" formControlName="message"></textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-select placeholder="Post type" formControlName="type">
+          <mat-option value="option">Public</mat-option>
+          <mat-option value="option">Private</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+</form>
