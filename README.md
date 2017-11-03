@@ -10,13 +10,9 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Angular sample test cases
 
-AppComponent
-* should create the app
-* should have as title 'app'
-* should render title in a h1 tag
-
-## Tests to implement
-- [ ] should have the class variable title as 'TDD' and angularVersion as 5
-- [ ] should render angularVersion in pre tag
+## Unit Tests to implement
+- [x] create the app.
+- [x] should have the class variable title as 'TDD' and angularVersion as 5
+- [x] should render angularVersion in pre tag
+## Unit test report
