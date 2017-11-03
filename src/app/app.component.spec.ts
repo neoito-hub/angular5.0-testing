@@ -19,7 +19,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('TDD');
     expect(app.angularVersion).toEqual(5);
   }));
-  it('should render angularVersion in pre tag', async(() => {
+  it('should render title in pre tag', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
