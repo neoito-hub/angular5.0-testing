@@ -1,22 +1,22 @@
-<!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <pre>
     Angular {{angularVersion}} {{title}}
   </pre>
 </div>
-<form [formGroup]="chatForm" novalidate>
-  <div class="form-group">
+<form [formGroup]="chatForm" (ngSubmit)="onSubmit()">
+  <div >
       <mat-form-field>
-        <input matInput placeholder="Username" formControlName="user">
+        <input matInput placeholder="Username" formControlName="user" required>
+          <span *ngIf="chatForm.get('user').touched && chatForm.hasError('required', 'user')">
+            Enter a valid username
+          </span>
       </mat-form-field>
       <mat-form-field>
         <textarea matInput placeholder="Message" formControlName="message"></textarea>
-      </mat-form-field>
-      <mat-form-field>
-        <mat-select placeholder="Post type" formControlName="type">
-          <mat-option value="option">Public</mat-option>
-          <mat-option value="option">Private</mat-option>
-        </mat-select>
+          <span *ngIf="chatForm.get('message').touched && chatForm.hasError('required', 'message')">
+            Enter a valid message
+          </span>
       </mat-form-field>
     </div>
+    <button mat-raised-button color="accent" type="submit" [disabled]="chatForm.invalid">Send</button>
 </form>
